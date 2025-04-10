@@ -68,19 +68,19 @@ avoid-lit i (neg x) p = neg (avoid i x p)
 
 -- semantics
 
-pos-sem : Lit n → Val n → Bool
-pos-sem (pos x) v = v x
-pos-sem (neg x) v = not (v x)
+lit-sem : Lit n → Val n → Bool
+lit-sem (pos x) v = v x
+lit-sem (neg x) v = not (v x)
 
 clause-sem : Clause n → Val n → Bool
-clause-sem ps v = any (λ a → pos-sem a v) ps
+clause-sem ps v = any (λ a → lit-sem a v) ps
 
 cnf-sem : CNF n → Val n → Bool
 cnf-sem ps v = all (λ d → clause-sem d v) ps
 
 instance
   ⟦⟧-Lit : ⟦⟧-notation (Lit n)
-  ⟦⟧-Lit {n} = brackets (Val n → Bool) pos-sem
+  ⟦⟧-Lit {n} = brackets (Val n → Bool) lit-sem
 
   ⟦⟧-Clause : ⟦⟧-notation (Clause n)
   ⟦⟧-Clause {n} = brackets (Val n → Bool) clause-sem
