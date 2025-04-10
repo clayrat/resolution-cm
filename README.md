@@ -1,4 +1,4 @@
-# Resolution and propostitional stuff
+# Resolution and propositional stuff
 
 Based on the [cubical-mini](https://github.com/cmcmA20/cubical-mini/) library.
 
