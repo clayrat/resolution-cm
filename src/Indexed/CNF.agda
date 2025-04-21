@@ -1,5 +1,5 @@
 {-# OPTIONS --safe #-}
-module CNF where
+module Indexed.CNF where
 
 open import Prelude
 open import Meta.Effect
@@ -13,7 +13,7 @@ open import Data.Fin.Operations
 open import Data.List as List
 open import Data.List.Operations.Properties
 
-open import Proposition
+open import Indexed.Proposition
 
 -- conjunctive normal forms
 -- https://1lab.dev/Logic.Propositional.Classical.CNF.html

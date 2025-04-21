@@ -1,5 +1,5 @@
 {-# OPTIONS --safe #-}
-module SAT where
+module Indexed.SAT where
 
 open import Prelude
 open import Meta.Effect
@@ -18,8 +18,8 @@ open import Data.Maybe as Maybe
 open import Data.List as List
 open import Data.List.Correspondences.Unary.Any
 
-open import Proposition
-open import CNF
+open import Indexed.Proposition
+open import Indexed.CNF
 
 -- SAT solving
 -- https://1lab.dev/Logic.Propositional.Classical.SAT.html
